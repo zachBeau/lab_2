@@ -1,0 +1,61 @@
+Lab_2
+Zach Beauchamp
+LAB – Fundamental Data Structure
+Dr. Fei Zuo
+
+
+Lab_2 FantasyBattle.cpp
+
+OBJECTIVE:
+
+	Develop a three-tier class inheritance system using public inheritance and dynamic binding.
+
+Method:
+	The parent class, Character, has been created as an abstract class and has two child classes, 
+    Hero and Villain. These two classes each of a set of sub classes that inherit all the public 
+    members of their parent class and grandparent class. 
+	The Character abstract class defines name, health, level and has the virtual void function 
+    displayInfo() = 0. Functions in Character have been created to give access to name, health, 
+    and level to the sub classes:
+        Character::setName(string)
+        Character::setHealth(int)
+        Character::setLevel(int)
+
+    Each subclass overrides displayInfo() to display specific characteristics of itself and inherits 
+    name, health, level. 
+
+Dynamic Binding:
+
+	As instructed in the assignment template, dynamic binding was used to assign the subclasses to 
+    a Character pointer and then a for loop is used to iterate over the array and print the displayInfo() 
+    function displaying all characteristics of each object. 
+
+makefile:
+
+    A makefile has been included with the following predefined commands:	
+            run: compile and execute the a.exe file	
+            clean: delete previous build	
+            cleanRun: delete previous build, compile, and execute the a.exe file
+
+Test Input:
+	Hero:
+		Name: Rand al’Thor
+		Health: 85
+		Level: 10
+		specialPower: Saidin
+	Warrior:
+		Name: al’Lan Mandragoran
+		Health: 100
+		Level: 15
+		Weapon: The sword of the Malkier Kings
+	Mage:
+		Name: Moraine Damodred, Aes Sedai of the Blue Ajah
+		Health: 75
+		Level: 25
+        Spell: Saidar (NOTE: In this fantasy world the mage doesn’t “cast a spell” they weave Saidar)
+	
+    DarkLord:
+		Name: Lanfear, Forsaken of the Light
+		Health: 150
+		Level: 25
+		darkMagic: Saidar used with true malice
